@@ -1,0 +1,62 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+background-color: black;
+height: 100px;
+    
+}
+.navMenu{
+    display: flex;     
+}
+.navMenu li{
+    padding: 0 16px;
+   
+}
+.navbar h1{
+    margin-left: 20px;
+}
+.navMenu a{
+    font-weight: bold;
+    font-size: 20px;
+}
+.iconItem{
+    display: none;
+}
+
+@media screen and (max-width:1040px) {
+    .navMenu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: black;
+        top: 0;
+        left:-120%;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .navMenu.active{
+        left: 0;
+       top:18%;
+     
+    }
+    .navMenu li{
+        padding: 16px;
+        margin-right: 80px;
+    }
+    .navMenu li a{
+        font-weight: 16px;
+    }
+    .iconItem{
+        position: absolute;
+        top: 5;
+        right: 0;
+        margin-right: 30px;
+        font-weight: bold;
+        display: initial;
+    }
+    
+}
